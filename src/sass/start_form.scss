@@ -1,0 +1,178 @@
+$primaryColor: #e1eefb;
+$secondaryColor: #21dcc9;
+$white: #fff;
+$black: #000;
+$shadow: rgba(0, 0, 0, 0.35);
+$lightGray: #e6e6e6;
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 8px 0;
+    border-radius: 16px;
+    text-decoration: none;
+    color: black;
+    background: $secondaryColor;
+    font-size: 24px;
+
+    &:hover {
+        opacity: 0.8;
+        transform: scale(0.95);
+        transition: 0.5s;
+        text-decoration: none;
+        color: $black;
+    }
+}
+
+.add-item{
+    label{
+        margin-left: 1.5em;
+        
+        input{
+            padding: 0.5em;
+            border-radius: 1em;
+            border: 1px solid $lightGray;
+        }
+    }
+    .btn-add{
+        background: $secondaryColor;
+        width: auto;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin: 0 1em;
+    }
+}
+
+form {
+    fieldset {
+        width: 100%;
+        padding: 1em;
+        border-top: 0.01em solid $secondaryColor;
+
+        legend {
+            width: auto;
+            margin: 0 0.7em;
+            padding: 0 0.3em;
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .item {
+            height: 10em;
+            padding: 0;
+            margin: 0.5em;
+
+            label {
+                width: 100%;
+                height: 100%;
+
+                input[type="checkbox"] {
+                    opacity: 0;
+                    position: absolute;
+                    &:focus{
+                        +span {
+                            +img {
+                                opacity: 0.5;
+                                transition: 0.5s;
+
+                                +p {
+                                    opacity: 1;
+                                    transition: 1s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+
+                img {
+                    border-radius: 1em;
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    object-fit: cover;
+                    transition: 0.3s;
+                }
+
+                p {
+                    position: absolute;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
+                    margin-top: 25%;
+                    font-size: 1.5em;
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+
+                input[type="checkbox"]:checked {
+                    // opacity: 1;
+                    // z-index: 100;
+
+                    +span {
+                        display: block;
+                        color: #000;
+                        background-color: #21dcc9;
+                        transition: 0.3s;
+                        padding: 0.3em 0.7em;
+                        border-radius: 2em;
+                        z-index: 100;
+                        position: absolute;
+                        top: -0.5em;
+                        left: -0.5em;
+                        opacity: 1;
+                        box-shadow: 0.25em 0.25em 0.5em 0em $shadow;
+
+                        +img {
+                            opacity: 0.5;
+                            transition: 0.5s;
+
+                            +p {
+                                opacity: 1;
+                                color: black;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                label {
+                    cursor: pointer;
+
+                    input[type="checkbox"] {
+                        +span {
+                            +img {
+                                opacity: 0.5;
+                                transition: 0.5s;
+
+                                +p {
+                                    top: 0;
+                                    opacity: 1;
+                                    transition: 1s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

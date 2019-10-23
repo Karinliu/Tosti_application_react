@@ -1,0 +1,61 @@
+$red: #ff6e6e;
+$white: #fff;
+$blueGrayish: #abced4;
+$lightGray: #eee;
+
+.list{
+	padding-left: 3em;
+    background-color: $white;
+    background: linear-gradient(90deg, transparent 2.4em, $blueGrayish 2em, $blueGrayish 2.5em, transparent 2.5em), linear-gradient($lightGray 0.1em, transparent 0.1em);
+    background-size: 100% 1.5em;
+
+    h2{
+        padding-top: 0.5em;
+    }
+    .listItem{
+    	padding: 0;
+    }
+
+    textarea{
+    	resize: none;
+	    width: 40%;
+	    height: 12em;
+	    border: 0;
+	    background: transparent;
+	    font-size: 1.2em;
+	    cursor: default;
+	    text-transform: capitalize;
+    
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+    .btn-reset{
+        background-color: $red;
+    }
+
+.container-copy{
+    .row{
+        min-height: 6em;
+    }
+
+    .copy-success{
+        padding: 0.2em;
+        margin: 0 auto;
+        margin-bottom: auto;
+        // animation: blink 2s infinite;    
+    }
+
+    button{
+        height: 2.4em;
+        margin-top: auto;
+        margin-bottom: 1em;
+    }
+}
+
+// @keyframes blink {
+//   0%, 100%   { opacity: 0; }
+//   50% { opacity: 1; }
+// }
