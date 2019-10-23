@@ -207,8 +207,7 @@ class TostiForm extends Component {
 	                    			onClick={this.props.handleClick}
 	                    		/>
 	                    		<span>✓</span>
-	                    		<img src="https://images3.persgroep.net/rcs/eEyQFlw2w63_BfVNJiJ2CasGxaM/diocontent/144299527/_fitwidth/694/?app
-	                    		Id=21791a8992982cd8da851550a453bd7f&quality=0.9" alt="kaas_img"/>
+	                    		<img src="https://images3.persgroep.net/rcs/eEyQFlw2w63_BfVNJiJ2CasGxaM/diocontent/144299527/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.9" alt="kaas_img"/>
 	                    		<p>Parmezaanse kaas</p>
 					        </label>
 	                    </div>
