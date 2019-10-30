@@ -29,6 +29,7 @@ class Start extends Component {
         if (e.target.checked === true) {
             const listItem = e.target.value;
             const items = [...this.state.items, listItem]
+            // const items = [listItem + ', '+this.state.items]
 
             this.setState({
                 items: items

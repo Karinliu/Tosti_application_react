@@ -12,13 +12,6 @@ class ListItems extends Component {
         }
     }
 
-    addSpaceBetween = (e) => {
-        console.log(e.target.value.split )
-        if( e.target.value.length){
-            console.log('FOUNDED')
-        }
-    }
-
     copyToClipboard = (e) => {
         this.textArea.select();
         document.execCommand('copy');
@@ -49,7 +42,6 @@ class ListItems extends Component {
 
                 <ul className="listItem">
                     <textarea 
-                        onClick = {this.addSpaceBetween}
                         ref={(textarea) => this.textArea = textarea} 
                         defaultValue={this.props.entries.map(item => item)} 
                         readOnly
